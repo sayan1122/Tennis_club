@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+  {% load static %}
+    <p>The queryset object:</p>
+    {{ mymembers }}
+    
+    <p>Loop through the items:</p>
+    
+
+    <table border='1'>
+        <tr>
+          <th>ID</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Phone</th>
+        </tr>
+        {% for x in mymembers %}
+          <tr>
+            <td>{{ x.id }}</td>
+              <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.phone }}</td>
+            <
+          </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
